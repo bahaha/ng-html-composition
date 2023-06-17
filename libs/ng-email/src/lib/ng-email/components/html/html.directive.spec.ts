@@ -24,5 +24,14 @@ describe('HtmlDirective', () => {
         expect.stringContaining(`${DOCTYPE}<html lang="en" dir="ltr"></html>`)
       );
     });
+
+    test('should contains the children', () => {
+      spectator = createDirective(
+        `<html ccEmailHtml><head></head><body></body></html>`
+      );
+      expect(spectator.directive.render()).toEqual(
+        expect.stringContaining(`<head></head><body></body>`)
+      );
+    });
   });
 });
