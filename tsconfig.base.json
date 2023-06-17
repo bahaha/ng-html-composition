@@ -14,7 +14,9 @@
     "skipLibCheck": true,
     "skipDefaultLibCheck": true,
     "baseUrl": ".",
-    "paths": {}
+    "paths": {
+      "@devcc/ng-email": ["libs/ng-email/src/index.ts"]
+    }
   },
   "exclude": ["node_modules", "tmp"]
 }
