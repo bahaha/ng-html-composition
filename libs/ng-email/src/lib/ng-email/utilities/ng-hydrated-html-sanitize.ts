@@ -4,5 +4,6 @@ const attributesOnPrefix = (prefix: string) =>
 export function sanitize(hydratedHtml: string): string {
   return (hydratedHtml ?? '')
     .replace(attributesOnPrefix('_ng'), '')
+    .replace(attributesOnPrefix('ng-'), '')
     .replace(attributesOnPrefix('cc'), '');
 }
